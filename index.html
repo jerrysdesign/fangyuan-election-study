@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="芳苑鄉第一選區的八村歷史開票、區域票量換算與選民分票研究。">
+<title>芳苑第一選區｜選票地理與分票研究</title>
+<link rel="stylesheet" href="style.css">
+<script src="report.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#main"><span aria-hidden="true">▥</span> 芳苑選區研究</a>
+    <nav aria-label="報告章節"><a href="#regions">區域結構</a><a href="#votes">八村開票</a><a href="#observations">地方觀察</a><a href="#model">票量換算</a></nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">彰化縣芳苑鄉 ／ 鄉民代表第一選區</p>
+        <h1>芳苑的選票地理<span>與分票心理</span></h1>
+        <p class="intro">從 2022 年八村開票出發，梳理 2026 年五人競爭的地緣關係，以及「穩當選」預期可能如何影響投票選擇。</p>
+        <a class="cta" href="#votes">查看八村開票 <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="hero-chart">
+        <figcaption><strong>有效票的地理分布</strong><span>2022 年 ／ 共 4,789 票</span></figcaption>
+        <div class="hero-bar" role="img" aria-label="四區有效票占比依序為 35.1%、28.2%、24.9%、11.8%"><span></span><span></span><span></span><span></span></div>
+        <ul class="hero-legend">
+          <li><i class="a"></i>芳苑四村 <strong>35.1%</strong></li>
+          <li><i class="b"></i>三合 <strong>28.2%</strong></li>
+          <li><i class="c"></i>新街、永興 <strong>24.9%</strong></li>
+          <li><i class="d"></i>後寮 <strong>11.8%</strong></li>
+        </ul>
+      </figure>
+    </div>
+  </section>
+  <div class="wrap">
+    <section class="section" id="regions" aria-labelledby="regions-title">
+      <div class="section-head"><div><p class="eyebrow">2022 年開票紀錄</p><h2 id="regions-title">四個區域，四種票源結構</h2></div><p>芳苑四村與三合共占全區有效票的 63.3%。以下分組依分享對話中的地方地理關係整理。</p></div>
+      <div class="region-grid">
+        <article class="region a"><div class="region-title"><h3>芳苑四村</h3><strong>1,680<span> 票</span></strong></div><p class="caption">芳苑、芳中、仁愛、信義</p><p>洪進來在四村共得 773 票，占個人全區得票 60.7%。仁愛村洪進來 188 票、洪江懷 184 票，兩人相差 4 票。</p></article>
+        <article class="region b"><div class="region-title"><h3>三合</h3><strong>1,350<span> 票</span></strong></div><p class="caption">全區有效票最多的村</p><p>陳宗壁在三合獲 576 票，占村內 42.7%，也占個人全區得票 63.9%。三名本屆未參選者當年在這裡合計獲 460 票。</p></article>
+        <article class="region c"><div class="region-title"><h3>新街、永興</h3><strong>1,194<span> 票</span></strong></div><p class="caption">兩村合計</p><p>許清安在新街獲 142 票，在永興獲 226 票。兩村合計 368 票，占個人全區得票 51.4%。</p></article>
+        <article class="region d"><div class="region-title"><h3>後寮</h3><strong>565<span> 票</span></strong></div><p class="caption">本屆候選人結構改變</p><p>本屆未參選的陳國基，上屆在後寮獲 268 票，占村內有效票 47.4%。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="votes" aria-labelledby="votes-title">
+      <div class="section-head"><div><p class="eyebrow">2022 年開票紀錄</p><h2 id="votes-title">八村開票比較</h2></div><p>切換候選人與分母，查看票數、村內得票率，或每一村對該候選人總得票的貢獻。</p></div>
+      <div class="panel">
+        <div class="controls">
+          <label for="candidate">2022 年候選人<select id="candidate"><option>洪進來</option><option>陳宗壁</option><option>許清安</option><option>洪江懷</option><option>陳國基</option><option>黃雪梨</option></select></label>
+          <label for="metric">顯示方式<select id="metric"><option value="votes">得票數</option><option value="village">村內得票率</option><option value="candidate">占個人全區得票</option></select></label>
+        </div>
+        <p id="chart-summary" class="summary" aria-live="polite"></p>
+        <ul class="bars" id="vote-bars" aria-label="各村比較"></ul>
+        <details><summary>查看八村完整開票表</summary><div class="table-scroll" tabindex="0" role="region" aria-label="八村開票表，可橫向捲動"><table id="vote-table"><caption>2022 年芳苑鄉第一選區有效票與候選人得票</caption><thead></thead><tbody></tbody><tfoot></tfoot></table></div></details>
+      </div>
+    </section>
+
+    <section class="section" id="observations" aria-labelledby="observations-title">
+      <div class="section-head"><div><p class="eyebrow">2026 年參選結構</p><h2 id="observations-title">地方觀察與分票假設</h2></div><p>候選人姓名與號次依選舉公報。村落連結、拜票及人際關係來自分享對話。</p></div>
+      <div class="panel roster" aria-label="2026 年候選人">
+        <div><span>1 號</span><strong>陳建財</strong><small>新參選</small></div>
+        <div><span>2 號</span><strong>洪進來</strong><small>競選連任</small></div>
+        <div><span>3 號</span><strong>許清安</strong><small>上屆參選</small></div>
+        <div><span>4 號</span><strong>陳宗壁</strong><small>競選連任</small></div>
+        <div><span>5 號</span><strong>顏志華</strong><small>新參選</small></div>
+      </div>
+      <div class="observations">
+        <article><p class="eyebrow">地方觀察</p><h3>仁愛與芳苑生活圈</h3><p>依分享對話，仁愛是洪進來人際連結較深的村，陳建財來自同一生活圈的信義村。兩人的實際支持者重疊程度仍待確認。</p><p>對話也提到，本屆未參選的洪江懷居於仁愛，個人支持陳宗壁，並陪同他到芳苑、芳中、仁愛拜票。這項觀察只描述個人支持與活動，三村原有選民的投票選擇仍未知。</p></article>
+        <article><p class="eyebrow">地方觀察</p><h3>三合與新街的地緣關係</h3><p>依分享對話，顏志華來自三合村，與陳宗壁的歷史得票集中區重疊。許清安的地方根基在新街，不過他上屆在永興的票數較多。實際票源重疊程度仍待驗證。</p></article>
+        <article><p class="eyebrow">待驗證假設</p><h3>「穩當選」會讓人改投嗎？</h3><p>一位選民若相信第一偏好的候選人已有足夠選票，可能因人情或希望另一位候選人當選，改投次要支持對象。確認這種情況需要同時觀察第一偏好、當選預期和實際投票意向。</p></article>
+        <article><p class="eyebrow">2022 年開票紀錄</p><h3>上屆 1,898 票的去向仍未知</h3><p>洪江懷（821 票）、陳國基（614 票）及黃雪梨（463 票）本屆沒有出現在公報名單。三人上屆合計占全區有效票 39.6%。歷史資料可以呈現得票分布，個別選民的選擇仍需選後匿名調查才能研究。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="model" aria-labelledby="model-title">
+      <div class="section-head"><div><p class="eyebrow">情境試算</p><h2 id="model-title">按歷史比例換算區域票量</h2></div><p>固定 2022 年四區有效票占比，換算設定總量。試算範圍只到各區票量。</p></div>
+      <div class="panel model">
+        <form id="model-form">
+          <label for="total">假設全區有效票<input id="total" type="number" min="1" max="100000" step="1" value="4500" required inputmode="numeric"></label>
+          <div class="form-actions"><button type="submit">重新換算</button><button id="reset" type="button" class="plain">回到 4,500 票</button></div>
+          <p class="caption">以最大餘數法分配取整後剩餘的票，使四區加總等於輸入的總量。</p>
+        </form>
+        <div class="allocation" aria-live="polite"><p id="model-summary" class="summary"></p><ul id="model-results" class="bars"></ul></div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer id="sources">
+  <div class="wrap footer-inner"><div><p class="eyebrow">芳苑鄉第一選區</p><h2>資料來源</h2><p>報告整理於 2026 年 11 月 18 日。</p></div><ul>
+    <li><a href="https://votetw.com/wiki/2022年彰化縣芳苑鄉鄉民代表選舉芳苑鄉第1選舉區投票結果">VoteTW｜2022 年第一選區逐村開票 ↗</a></li>
+    <li><a href="https://eebulletin.cec.gov.tw/115/09彰化縣/04鄉鎮市民代表/芳苑鄉/芳苑鄉第01選舉區.pdf">中央選舉委員會｜2026 年選舉公報 ↗</a></li>
+    <li><a href="https://chatgpt.com/share/6afd0a95-33ac-83e8-9dc1-c4d0985a6a7e?ogimg=plain">原始分享對話｜地方觀察與研究問題 ↗</a></li>
+  </ul></div>
+</footer>
+</body>
+</html>
