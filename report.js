@@ -11,6 +11,18 @@ const villages = [
   ["永興", 785, 197, 115, 226, 103, 95, 49],
   ["後寮", 565, 72, 82, 65, 37, 268, 41]
 ];
+// Village, October 2026 population, October 2026 households, 2022 electors.
+const electorStatistics = [
+  ["芳苑村", 953, 387, 898],
+  ["芳中村", 396, 171, 385],
+  ["仁愛村", 746, 307, 703],
+  ["信義村", 496, 193, 498],
+  ["三合村", 2321, 898, 1995],
+  ["新街村", 729, 327, 738],
+  ["永興村", 1345, 443, 1275],
+  ["後寮村", 1030, 380, 926]
+];
+
 const groups = [
   ["芳苑四村", villages.slice(0, 4)],
   ["三合", [villages[4]]],
@@ -91,6 +103,15 @@ function drawAllocation(total) {
   document.querySelector("#model-results").replaceChildren(...rows);
   document.querySelector("#model-summary").textContent = "四區合計 " + numbers.format(total) + " 票";
 }
+
+const electorTable = document.querySelector("#elector-table");
+const electorRows = electorTable.tBodies[0];
+electorStatistics.forEach(([village, population, households, previousElectors]) =>
+  appendTableRow(electorRows, [village, "待公告", population, households, previousElectors])
+);
+appendTableRow(electorTable.tFoot, ["全區合計", "待公告",
+  ...[1, 2, 3].map(column => sumColumn(electorStatistics, column))
+]);
 
 appendTableRow(document.querySelector("#vote-table thead"), ["村別", "有效票", ...candidates], true);
 villages.forEach(row => appendTableRow(document.querySelector("#vote-table tbody"), row));
